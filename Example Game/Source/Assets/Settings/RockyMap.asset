@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722279adc464b468fbccf98830141117, type: 3}
+  m_Name: RockyMap
+  m_EditorClassIdentifier: 
+  startTiles:
+  - tileObject: {fileID: 2591042200687448514, guid: d07093344c816202cb35c2e85e4d5071, type: 3}
+    tileUsable: 1
+    previewImage: {fileID: 0}
+    rarity: 1
+    requiredUse: 0
+  endTiles:
+  - tileObject: {fileID: 673774116880418854, guid: ff26db8e1e1b40eddaf612c80869f9b7, type: 3}
+    tileUsable: 1
+    previewImage: {fileID: 0}
+    rarity: 1
+    requiredUse: 0
+  doorCaps:
+  - tileObject: {fileID: 6582862213255172998, guid: f3af010de3348dba085562d9087e8adc, type: 3}
+    tileUsable: 1
+    previewImage: {fileID: 0}
+    rarity: 1
+    requiredUse: 0
+  tileSet:
+  - tileObject: {fileID: 2357990525040621573, guid: a85dfc58b405f82e89692ed2d69edfab, type: 3}
+    tileUsable: 1
+    previewImage: {fileID: 0}
+    rarity: 4
+    requiredUse: 0
+  - tileObject: {fileID: 2094006854997526158, guid: b1117d482c6c654bb8c178c7b12bb741, type: 3}
+    tileUsable: 1
+    previewImage: {fileID: 0}
+    rarity: 2
+    requiredUse: 0
+  - tileObject: {fileID: 5980109070742060239, guid: a4f439e9682fb0f599f8750b09e0415e, type: 3}
+    tileUsable: 1
+    previewImage: {fileID: 0}
+    rarity: 2
+    requiredUse: 0
+  - tileObject: {fileID: 2337038224797434421, guid: f6ff4f936bed71109847fffd1490c822, type: 3}
+    tileUsable: 1
+    previewImage: {fileID: 0}
+    rarity: 2
+    requiredUse: 0
+  - tileObject: {fileID: 5445258437056547928, guid: e4493ea6a041c428eb781c79c1deab47, type: 3}
+    tileUsable: 1
+    previewImage: {fileID: 0}
+    rarity: 6
+    requiredUse: 0
+  - tileObject: {fileID: 1553230569880686485, guid: cfd81e0db09c72818b859a5821db9a43, type: 3}
+    tileUsable: 1
+    previewImage: {fileID: 0}
+    rarity: 1
+    requiredUse: 0
+  - tileObject: {fileID: 8572406911927019430, guid: 681872ba659eabc9ea238bb6bf4ac639, type: 3}
+    tileUsable: 1
+    previewImage: {fileID: 0}
+    rarity: 1
+    requiredUse: 0
+  axisMode: 1
+  allowRotation: 1
+  useRB2D: 1
+  maxOverlap: 0.1
+  maxTileCount: 50
+  minTileCount: 40

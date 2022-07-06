@@ -1,0 +1,1 @@
+Source and documentation for RTMG can be found here: https://github.com/Ryantheinventor/2DTiledMapGenerator 
