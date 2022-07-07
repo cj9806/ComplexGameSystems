@@ -101,7 +101,7 @@ namespace Unity.FPS.AI
         public bool IsTargetInAttackRange => DetectionModule.IsTargetInAttackRange;
         public bool IsSeeingTarget => DetectionModule.IsSeeingTarget;
         public bool HadKnownTarget => DetectionModule.HadKnownTarget;
-        public NavMeshAgent NavMeshAgent { get; private set; }
+        //public NavMeshAgent NavMeshAgent { get; private set; }
         public DetectionModule DetectionModule { get; private set; }
 
         int m_PathDestinationNodeIndex;
@@ -134,7 +134,7 @@ namespace Unity.FPS.AI
             m_Actor = GetComponent<Actor>();
             DebugUtility.HandleErrorIfNullGetComponent<Actor, EnemyController>(m_Actor, this, gameObject);
 
-            NavMeshAgent = GetComponent<NavMeshAgent>();
+            //NavMeshAgent = GetComponent<NavMeshAgent>();
             m_SelfColliders = GetComponentsInChildren<Collider>();
 
             m_GameFlowManager = FindObjectOfType<GameFlowManager>();
@@ -164,13 +164,13 @@ namespace Unity.FPS.AI
             DebugUtility.HandleWarningIfDuplicateObjects<DetectionModule, EnemyController>(detectionModules.Length,
                 this, gameObject);
             // Override navmesh agent data
-            if (navigationModules.Length > 0)
-            {
-                m_NavigationModule = navigationModules[0];
-                NavMeshAgent.speed = m_NavigationModule.MoveSpeed;
-                NavMeshAgent.angularSpeed = m_NavigationModule.AngularSpeed;
-                NavMeshAgent.acceleration = m_NavigationModule.Acceleration;
-            }
+            //if (navigationModules.Length > 0)
+            //{
+            //    m_NavigationModule = navigationModules[0];
+            //    NavMeshAgent.speed = m_NavigationModule.MoveSpeed;
+            //    NavMeshAgent.angularSpeed = m_NavigationModule.AngularSpeed;
+            //    NavMeshAgent.acceleration = m_NavigationModule.Acceleration;
+            //}
 
             foreach (var renderer in GetComponentsInChildren<Renderer>(true))
             {
@@ -309,10 +309,10 @@ namespace Unity.FPS.AI
 
         public void SetNavDestination(Vector3 destination)
         {
-            if (NavMeshAgent)
-            {
-                NavMeshAgent.SetDestination(destination);
-            }
+            //if (NavMeshAgent)
+            //{
+            //    NavMeshAgent.SetDestination(destination);
+            //}
         }
 
         public void UpdatePathDestination(bool inverseOrder = false)

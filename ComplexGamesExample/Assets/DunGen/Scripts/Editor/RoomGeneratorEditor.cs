@@ -34,7 +34,6 @@ public class RoomGeneratorEditor : Editor
         if (!myScript.GORT && GUILayout.Button("Generate New Dungeon"))
         {
             myScript.MakeDungeon();
-            EditorUtility.SetDirty(baseObj.targetObject);
         }
 
         baseObj.ApplyModifiedProperties();

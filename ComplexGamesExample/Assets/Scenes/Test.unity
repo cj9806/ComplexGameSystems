@@ -303,14 +303,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cddb65e50134e334ca8e8aa9458c4d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: {fileID: 2116286599}
+  room: {fileID: 1468779401}
 --- !u!225 &1098503569 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 239579866480577446, guid: 316506b0be4d2564485e94b282612656,
     type: 3}
   m_PrefabInstance: {fileID: 1628432174027991028}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1332852103
+--- !u!1001 &1468779400
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -379,23 +379,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9121081929329937357, guid: 5a10fcd92264ecf44a1061282730b3e2,
         type: 3}
-      propertyPath: cellSize
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9121081929329937357, guid: 5a10fcd92264ecf44a1061282730b3e2,
-        type: 3}
       propertyPath: extents.x
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9121081929329937357, guid: 5a10fcd92264ecf44a1061282730b3e2,
         type: 3}
       propertyPath: extents.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9121081929329937357, guid: 5a10fcd92264ecf44a1061282730b3e2,
-        type: 3}
-      propertyPath: DrawOnlyExtents
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9121081929329937359, guid: 5a10fcd92264ecf44a1061282730b3e2,
         type: 3}
@@ -406,12 +396,7 @@ PrefabInstance:
     - target: {fileID: 9121081929329937359, guid: 5a10fcd92264ecf44a1061282730b3e2,
         type: 3}
       propertyPath: extraNodes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9121081929329937359, guid: 5a10fcd92264ecf44a1061282730b3e2,
-        type: 3}
-      propertyPath: startRoomPos
-      value: 
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9121081929329937359, guid: 5a10fcd92264ecf44a1061282730b3e2,
         type: 3}
@@ -420,19 +405,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9121081929329937359, guid: 5a10fcd92264ecf44a1061282730b3e2,
         type: 3}
-      propertyPath: required.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9121081929329937359, guid: 5a10fcd92264ecf44a1061282730b3e2,
-        type: 3}
-      propertyPath: manulallySelectNodes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9121081929329937359, guid: 5a10fcd92264ecf44a1061282730b3e2,
-        type: 3}
       propertyPath: corriderRooms.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 9121081929329937359, guid: 5a10fcd92264ecf44a1061282730b3e2,
+        type: 3}
+      propertyPath: corriderRooms.Array.data[0]
+      value: 
+      objectReference: {fileID: 1108330345190924920, guid: b08f63ec086e47049b2ba60cecd74a3f,
+        type: 3}
     - target: {fileID: 9121081929329937359, guid: 5a10fcd92264ecf44a1061282730b3e2,
         type: 3}
       propertyPath: corriderRooms.Array.data[1]
@@ -443,28 +424,34 @@ PrefabInstance:
         type: 3}
       propertyPath: corriderRooms.Array.data[2]
       value: 
-      objectReference: {fileID: 1108330345190924920, guid: b08f63ec086e47049b2ba60cecd74a3f,
+      objectReference: {fileID: 7760750439894056691, guid: cd4171df8fdee384ca7ee7330093c5db,
         type: 3}
     - target: {fileID: 9121081929329937359, guid: 5a10fcd92264ecf44a1061282730b3e2,
         type: 3}
       propertyPath: corriderRooms.Array.data[3]
       value: 
-      objectReference: {fileID: 7760750439894056691, guid: cd4171df8fdee384ca7ee7330093c5db,
+      objectReference: {fileID: 2627199998107880597, guid: ce4bcf9a769803e45bd669a640ef945f,
         type: 3}
     - target: {fileID: 9121081929329937359, guid: 5a10fcd92264ecf44a1061282730b3e2,
         type: 3}
       propertyPath: corriderRooms.Array.data[4]
       value: 
-      objectReference: {fileID: 2627199998107880597, guid: ce4bcf9a769803e45bd669a640ef945f,
-        type: 3}
-    - target: {fileID: 9121081929329937359, guid: 5a10fcd92264ecf44a1061282730b3e2,
-        type: 3}
-      propertyPath: corriderRooms.Array.data[5]
-      value: 
       objectReference: {fileID: 1350771879950852209, guid: f2b82d085c1f078419ff552a811acb33,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a10fcd92264ecf44a1061282730b3e2, type: 3}
+--- !u!114 &1468779401 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9121081929329937359, guid: 5a10fcd92264ecf44a1061282730b3e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1468779400}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ca570d05b8bff4db51637ad0fb1b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1631574773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -534,18 +521,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 761cdc9e4e883334cbdcea062d0befa7, type: 3}
---- !u!114 &2116286599 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9121081929329937359, guid: 5a10fcd92264ecf44a1061282730b3e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1332852103}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1ca570d05b8bff4db51637ad0fb1b66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1628432174027991028
 PrefabInstance:
   m_ObjectHideFlags: 0

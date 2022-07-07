@@ -11,6 +11,8 @@ public class RoomGenerator : MonoBehaviour
     public GameObject[] corriderRooms;
     public GameObject[] cornerRooms;
 
+
+
     [Header("Settings")]
     public int extraNodes;
 
@@ -24,8 +26,8 @@ public class RoomGenerator : MonoBehaviour
     private HandPlacedNode[] required;
 
     //private under the hood things--------------------------------------
-    [HideInInspector]
-    public Transform startRoomPos;
+    private Transform startPos;
+    public Transform startRoomPos { get => startPos; }
     GameObject parent;
     private List<Vector3Int> path;
 
@@ -72,7 +74,7 @@ public class RoomGenerator : MonoBehaviour
         }
         cellLookup[grid.GetCellIndices(ActiveRooms.First.Value.transform.position)].hasRoom = true;
         cellLookup[grid.GetCellIndices(ActiveRooms.Last.Value.transform.position)].hasRoom = true;
-        startRoomPos = ActiveRooms.First.Value.transform;
+        startPos = ActiveRooms.First.Value.transform;
     }
     
     void GenerateExtraNodes()
@@ -121,6 +123,7 @@ public class RoomGenerator : MonoBehaviour
 
         openList.Add(start);
         Vector3Int activeNode = openList[0];
+        if (cellLookup[activeNode].hasRoom) return null;
 
         //while open list is not empty
         while (openList.Count > 0)
@@ -176,9 +179,17 @@ public class RoomGenerator : MonoBehaviour
                 //add valid neighbors to open list
                 if (isNeighbor)
                 {
+                    //if the room is not aready occupied
                     if (!cellLookup[checkNeighbors].hasRoom)
+                    {
+
                         neighborPos = checkNeighbors;
-                    else continue;                   
+                    }
+                    else 
+                    {
+                        Debug.Log("Path failed: Crossed over itself");
+                        continue;
+                    }                   
                 }
                 else
                 {
@@ -436,8 +447,10 @@ public class RoomGenerator : MonoBehaviour
                 GenerateStartAndEnd();
                 path = Pathfind(grid.GetCellIndices(ActiveRooms.First.Value.doors[0].position), grid.GetCellIndices(ActiveRooms.Last.Value.doors[0].position));
                 GeneratePath(path,ActiveRooms.Last);
+                Debug.Log("Path to complex: Generating default dungeon");
             }
         }
+        startPos = ActiveRooms.First.Value.transform;
         exsitingDungeon = true;
     }
     [System.Serializable]
